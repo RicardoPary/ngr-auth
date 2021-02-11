@@ -122,6 +122,46 @@
           }
         }
       }
+    },
+    "ngr-auth": {
+      "projectType": "library",
+      "root": "projects/ngr-auth",
+      "sourceRoot": "projects/ngr-auth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngr-auth/tsconfig.lib.json",
+            "project": "projects/ngr-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngr-auth/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngr-auth/src/test.ts",
+            "tsConfig": "projects/ngr-auth/tsconfig.spec.json",
+            "karmaConfig": "projects/ngr-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngr-auth/tsconfig.lib.json",
+              "projects/ngr-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "libraries"

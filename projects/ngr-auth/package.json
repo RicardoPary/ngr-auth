@@ -1,0 +1,19 @@
+{
+  "name": "ngr-auth",
+  "version": "1.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+
+    "@ngrx/store": "^10.1.0",
+    "@ngrx/effects": "^10.1.0",
+    "ngrx-store-logger": "^0.2.4",
+    "ngrx-store-localstorage": "^10.1.0",
+
+    "@auth0/angular-jwt": "^5.0.0",
+    "@ngx-pwa/local-storage": "^10.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
